@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #FF5A5F; /* Coral-red (primary) - red-500 */
+  --color-primary-50: #FFF5F5; /* Very light coral - red-50 */
+  --color-primary-100: #FFE5E6; /* Light coral - red-100 */
+  --color-primary-200: #FFCCCE; /* Medium light coral - red-200 */
+  --color-primary-500: #FF5A5F; /* Base coral-red - red-500 */
+  --color-primary-600: #E5515A; /* Darker coral - red-600 */
+  --color-primary-700: #CC484F; /* Dark coral - red-700 */
+  --color-primary-800: #B23F44; /* Very dark coral - red-800 */
+
+  /* Secondary Colors */
+  --color-secondary: #00A699; /* Teal (secondary) - teal-600 */
+  --color-secondary-50: #F0FDFA; /* Very light teal - teal-50 */
+  --color-secondary-100: #CCFBF1; /* Light teal - teal-100 */
+  --color-secondary-200: #99F6E4; /* Medium light teal - teal-200 */
+  --color-secondary-500: #14B8A6; /* Medium teal - teal-500 */
+  --color-secondary-600: #00A699; /* Base teal - teal-600 */
+  --color-secondary-700: #0D9488; /* Dark teal - teal-700 */
+  --color-secondary-800: #0F766E; /* Very dark teal - teal-800 */
+
+  /* Accent Colors */
+  --color-accent: #FC642D; /* Vibrant orange (accent) - orange-600 */
+  --color-accent-50: #FFF7ED; /* Very light orange - orange-50 */
+  --color-accent-100: #FFEDD5; /* Light orange - orange-100 */
+  --color-accent-200: #FED7AA; /* Medium light orange - orange-200 */
+  --color-accent-500: #F97316; /* Medium orange - orange-500 */
+  --color-accent-600: #FC642D; /* Base vibrant orange - orange-600 */
+  --color-accent-700: #C2410C; /* Dark orange - orange-700 */
+  --color-accent-800: #9A3412; /* Very dark orange - orange-800 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* Pure white (background) - white */
+  --color-surface: #F7F7F7; /* Subtle warm gray (surface) - gray-100 */
+  --color-surface-50: #FAFAFA; /* Very light surface - gray-50 */
+  --color-surface-100: #F7F7F7; /* Light surface - gray-100 */
+  --color-surface-200: #E5E5E5; /* Medium surface - gray-200 */
+  --color-surface-300: #D4D4D4; /* Darker surface - gray-300 */
+
+  /* Text Colors */
+  --color-text-primary: #222222; /* Near-black (text primary) - gray-900 */
+  --color-text-secondary: #717171; /* Medium gray (text secondary) - gray-500 */
+  --color-text-tertiary: #A3A3A3; /* Light gray (text tertiary) - gray-400 */
+  --color-text-inverse: #FFFFFF; /* White text for dark backgrounds - white */
+
+  /* Status Colors */
+  --color-success: #008A05; /* Forest green (success) - green-700 */
+  --color-success-50: #F0FDF4; /* Very light green - green-50 */
+  --color-success-100: #DCFCE7; /* Light green - green-100 */
+  --color-success-500: #22C55E; /* Medium green - green-500 */
+  --color-success-700: #008A05; /* Base forest green - green-700 */
+
+  --color-warning: #FFB400; /* Amber (warning) - yellow-500 */
+  --color-warning-50: #FEFCE8; /* Very light yellow - yellow-50 */
+  --color-warning-100: #FEF3C7; /* Light yellow - yellow-100 */
+  --color-warning-500: #FFB400; /* Base amber - yellow-500 */
+  --color-warning-600: #D97706; /* Dark amber - yellow-600 */
+
+  --color-error: #D93025; /* Clear red (error) - red-600 */
+  --color-error-50: #FEF2F2; /* Very light red - red-50 */
+  --color-error-100: #FEE2E2; /* Light red - red-100 */
+  --color-error-500: #EF4444; /* Medium red - red-500 */
+  --color-error-600: #D93025; /* Base clear red - red-600 */
+
+  /* Border Colors */
+  --color-border: #E8E8E8; /* Minimal border - gray-200 */
+  --color-border-light: #F3F4F6; /* Light border - gray-100 */
+  --color-border-dark: #D1D5DB; /* Dark border - gray-300 */
+
+  /* Shadow Values */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Animation Timing */
+  --timing-fast: 150ms;
+  --timing-normal: 200ms;
+  --timing-slow: 300ms;
+  --timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-600 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-700 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-200;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white font-medium px-6 py-3 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-200;
+  }
+
+  .card {
+    @apply bg-background border border-border rounded-md shadow-card;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-scale-hover {
+    transition: transform var(--timing-normal) var(--timing-function);
+  }
+
+  .animation-scale-hover:hover {
+    transform: scale(1.02);
+  }
+
+  .shadow-elevation {
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--timing-normal) var(--timing-function);
+  }
+
+  .shadow-elevation:hover {
+    box-shadow: var(--shadow-modal);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
